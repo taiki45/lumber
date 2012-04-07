@@ -1,10 +1,10 @@
 class Integer
 	def factorial
-		altSelf = self
-		(altSelf - 1).downto(1) do |i|
-			altSelf *= i
+		alt = self
+		(alt - 1).downto(1) do |i|
+			alt *= i
 		end
-		return altSelf
+		alt
 	end
 end
 

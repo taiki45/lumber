@@ -10,7 +10,7 @@
     #f))
 
 (define (fizz_buzz num)
-  (dotimes (i (+ num 1))
+  (dotimes (i (+ num 1) 0)
     (cond
       ((= 0 i) ())
       ((and (fizz i) (buzz i))
@@ -22,4 +22,5 @@
       (else
         (display #`",(number->string i)\n")))))
 
-(fizz_buzz 30)
+(define (main argv)
+  (fizz_buzz (string->number (car (cdr argv)))))

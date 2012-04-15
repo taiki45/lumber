@@ -1,3 +1,4 @@
+#!/usr/bin/env ruby
 def fizz?(num)
   return true if (num % 3) == 0
   false
@@ -22,4 +23,4 @@ def fizz_buzz(num)
   end
 end
 
-fizz_buzz(30)
+fizz_buzz(ARGV[0].to_i) if ARGV[0]

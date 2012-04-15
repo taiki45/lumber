@@ -23,4 +23,6 @@
         (display #`",(number->string i)\n")))))
 
 (define (main argv)
-  (fizz_buzz (string->number (car (cdr argv)))))
+  (if (null? (cdr argv))
+    (display "no arguments\n")
+    (fizz_buzz (string->number (car (cdr argv))))))

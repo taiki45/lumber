@@ -1,21 +1,18 @@
 #!/usr/bin/env ruby
-def fizz?(num)
-  return true if (num % 3) == 0
-  false
+def fizz? num
+  num % 3 == 0 ? true : false
+end
+def buzz? num
+  num % 5 == 0 ? true : false
 end
 
-def buzz?(num)
-  return true if (num % 5) == 0
-  false
-end
-
-def fizz_buzz(num)
+def fizz_buzz num
   1.upto(num) do |n|
-    if fizz?(n) && buzz?(n)
+    if fizz? n && buzz? n
       puts 'FizzBuzz'
-    elsif fizz?(n)
+    elsif fizz? n
       puts 'Fizz'
-    elsif buzz?(n)
+    elsif buzz? n
       puts 'Buzz'
     else
       puts n

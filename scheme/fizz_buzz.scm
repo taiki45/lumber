@@ -1,10 +1,10 @@
 #!/usr/bin/env gosh
-(define (fizz num)
+(define (fizz? num)
   (if (= 0 (remainder num 3))
     #t
     #f))
 
-(define (buzz num)
+(define (buzz? num)
   (if (= 0 (remainder num 5))
     #t
     #f))
@@ -13,11 +13,11 @@
   (dotimes (i (+ num 1) 0)
     (cond
       ((= 0 i) ())
-      ((and (fizz i) (buzz i))
+      ((and (fizz? i) (buzz? i))
            (display "FizzBuzz\n"))
-      ((fizz i)
+      ((fizz? i)
        (display "Fizz\n"))
-      ((buzz i)
+      ((buzz? i)
        (display "Buzz\n"))
       (else
         (display #`",(number->string i)\n")))))

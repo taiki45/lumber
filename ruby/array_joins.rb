@@ -5,7 +5,7 @@
 nums = [2,7,8,9]
 
 def return_incremented(nums)
-  (nums.join.to_i + 1).to_s.each_char.map {|c| c.to_i }
+  nums.join.to_i.succ.to_s.each_char.map {|c| c.to_i }
 end
 
 p return_incremented nums

@@ -8,4 +8,4 @@ def return_incremented(nums)
   nums.join.to_i.succ.to_s.each_char.map {|c| c.to_i }
 end
 
-p return_incremented nums
+p return_incremented nums #=> [2,7,9,0]

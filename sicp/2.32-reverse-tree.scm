@@ -1,0 +1,5 @@
+(define (reverse-tree tree)
+  (cond ((null? tree) tree)
+        ((pair? (car tree)) (append (reverse-tree (cdr tree))
+                              (cons (reverse-tree (car tree)) '())))
+        (else (append (reverse-tree (cdr tree)) (cons (car tree) '())))))

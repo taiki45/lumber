@@ -1,2 +1,1 @@
-(define hello "hello\n")
-(display hello)
+(display "Hello World!\n")
